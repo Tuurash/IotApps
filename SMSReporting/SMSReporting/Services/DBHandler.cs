@@ -70,13 +70,6 @@ namespace BrotecsLateSMSReporting
         private static string configurationFilename = "./dbConfig.ini";
 
         // hrm_db variables
-        private string hrm_server_ip = "192.168.30.252", hrm_ps = "", hrm_uid = "root";     // Topu; 12/12/13 :) 
-        private string hrm_db_name = "brotecshrm";
-
-        // local_db variables
-        private string local_server_ip = "192.168.30.252", local_ps = "", local_uid = "root";     // Topu; 12/12/13 :) 
-        private string local_db_name = "brotecs_sms_db";
-
         #endregion
 
 
@@ -84,19 +77,7 @@ namespace BrotecsLateSMSReporting
         //public DBHandler(string server_ip, string ps, string uid)
         public DBHandler()
         {
-            try
-            {
-                readDB_Configuration();
-                Trace.WriteLine("DBHandler: reading configuration file is complete");
-                dbConnect = new DBConnect(hrm_server_ip, hrm_ps, hrm_uid, hrm_db_name);
-                Trace.WriteLine("DBHandler: dbConnect construction is done");
-                dbConnectSMS = new DBConnect("192.168.30.252", "", "root", "brotecs_sms_db");
-                Trace.WriteLine("DBHandler: dbConnectSMS construction is done");
-            }
-            catch (Exception ex)
-            {
-                Trace.WriteLine("error! {0}", ex.Message);
-            }
+            
         }
         #endregion
 

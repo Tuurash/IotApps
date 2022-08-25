@@ -21,11 +21,10 @@ namespace BrotecsLateSMSReporting
         //Constructor
         public DBConnect(string server_ip, string ps, string usrID, string dbName)
         {
-            server = server_ip; // "192.168.30.28"
-            //database = "brotecshrm";
-            database = dbName;      // Amjad; 5th Dec, 2013
+            server = server_ip; 
+            database = dbName;      
             uid = usrID;
-            password = ps;//"brotecs";//
+            password = ps;
             Initialize();
         }
 

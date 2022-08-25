@@ -16,9 +16,6 @@ namespace BrotecsLateSMSReporting.Services
 
         private HttpPost httpPost = new HttpPost();
 
-        private const string hrmLeaveURL = "http://192.168.30.252/brotecsHRM/autoscripts/emergencyLeaveSMS.php?";
-        private const string mailerURL = "http://192.168.30.252/brotecsHRM/autoscripts/brotecsMailer.php?";
-
         public int authenticateSender(string number) => dbHandler.GetEmployeeID(number);
         List<string> collectNumsFromHRD_DB() => dbHandler.getAllActiveEmployeePhoneNumbers();
 
